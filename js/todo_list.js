@@ -1,7 +1,7 @@
 /*
  *  A simple todo list app.
  *
- * @author YOUR NAMES HERE
+ * @Pratik Mulpury and Christine Wang
  */
 
 // visibility filters
@@ -40,8 +40,14 @@ var todoList = [
 
 // app Vue instance
 var app = new Vue({
-    // TODO: add code here
+     data:todoList,
+     methods: {
+        removeCompleted: function(){
+            this.todos.splice(this.todos.indexOf(todo), 1)
+        }
+     },
 })
 
 // mount
 app.$mount('#todoapp')
+
